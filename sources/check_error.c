@@ -6,7 +6,7 @@
 /*   By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 14:44:23 by jfremond          #+#    #+#             */
-/*   Updated: 2021/09/17 11:15:56 by jfremond         ###   ########.fr       */
+/*   Updated: 2021/09/17 14:53:34 by jfremond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	is_a_num(char *argv)
 	i = 0;
 	if (argv[i] == '-')
 		++i;
+	if (!argv[i])
+		return (-1);
 	while (argv[i])
 	{
 		if (!ft_isdigit(argv[i]))
@@ -28,10 +30,10 @@ int	is_a_num(char *argv)
 	if (i > 11)
 		return (-1);
 	if (i == 11)
-		if (argv[0] != '-' || argv[10] > '8')
+		if (ft_atoll(argv) < INT_MIN)
 			return (-1);
 	if (i == 10)
-		if (argv[0] > '2' || argv[9] > '7')
+		if (ft_atoll(argv) > INT_MAX)
 			return (-1);
 	return (1);
 }

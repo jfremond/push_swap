@@ -6,7 +6,7 @@
 /*   By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 20:54:33 by jfremond          #+#    #+#             */
-/*   Updated: 2021/09/14 18:37:52 by jfremond         ###   ########.fr       */
+/*   Updated: 2021/09/17 14:51:17 by jfremond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,9 @@ void	sort_average_list(t_list **list_a, t_list **list_b, t_infos *infos)
 	tmp_b = list_b;
 	size_a = ft_lstsize((*tmp_a));
 	size_b = 0;
+	get_infos(*list_a, infos);
+	if (infos->sorted == 1)
+		return ;
 	while (size_b < (size_a - 3))
 	{
 		infos->b_num = get_big_num((*tmp_b), infos);
