@@ -6,7 +6,7 @@
 /*   By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:47:09 by jfremond          #+#    #+#             */
-/*   Updated: 2021/09/16 14:56:52 by jfremond         ###   ########.fr       */
+/*   Updated: 2021/09/21 11:43:31 by jfremond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ typedef struct s_infos
 	int	size;
 }				t_infos;
 
-/* Initialize everything */
-void	init_all(t_list *list_a, t_list *list_b, t_infos *infos);
+/* Initialize the structure */
 void	init_struct(t_infos *infos);
 
 /* Insert the values in the list */
