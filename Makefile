@@ -6,7 +6,7 @@
 #    By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/24 12:26:31 by jfremond          #+#    #+#              #
-#    Updated: 2021/09/21 11:41:53 by jfremond         ###   ########.fr        #
+#    Updated: 2021/10/01 19:04:31 by jfremond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ OBJS	=	$(SRCS:.c=.o)
 INCS	=	includes
 
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -f
 
 .c.o:
